@@ -1,0 +1,12 @@
+protocol Chat {
+    record Message {
+        string name;
+        string content;
+    }
+    record MessageHistory{
+        array<Message> messages;
+    }
+
+    boolean sendMessage(Message message);
+    MessageHistory getHistory();
+}
